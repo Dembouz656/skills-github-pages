@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tournoi Inter-Filière - Performics</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Tournoi Inter-Filière Performics</h1>
+
+    <div class="form-section">
+        <h2>Ajouter un match</h2>
+        <label for="journee">Choisir la journée:</label>
+        <select id="journee">
+            <option value="1">Journée 1</option>
+            <option value="2">Journée 2</option>
+            <option value="3">Journée 3</option>
+            <option value="4">Journée 4</option>
+            <option value="5">Journée 5</option>
+        </select><br><br>
+
+        <label for="sport">Sport:</label>
+        <select id="sport">
+            <option value="football">Football (Garçons)</option>
+            <option value="handball">Handball (Filles)</option>
+        </select><br><br>
+
+        <label for="team1">Équipe 1:</label>
+        <input type="text" id="team1" placeholder="Nom de l'équipe 1"><br><br>
+
+        <label for="team2">Équipe 2:</label>
+        <input type="text" id="team2" placeholder="Nom de l'équipe 2"><br><br>
+
+        <label for="score1">Score Équipe 1:</label>
+        <input type="number" id="score1" placeholder="Score Équipe 1"><br><br>
+
+        <label for="score2">Score Équipe 2:</label>
+        <input type="number" id="score2" placeholder="Score Équipe 2"><br><br>
+
+        <label for="buteur1">Buteurs Équipe 1 (séparés par une virgule):</label>
+        <input type="text" id="buteur1" placeholder="Ex: Buteur 1, Buteur 2"><br><br>
+
+        <label for="buteur2">Buteurs Équipe 2 (séparés par une virgule):</label>
+        <input type="text" id="buteur2" placeholder="Ex: Buteur 1, Buteur 2"><br><br>
+
+        <label for="date">Date:</label>
+        <input type="date" id="date"><br><br>
+
+        <label for="time">Heure:</label>
+        <input type="time" id="time"><br><br>
+
+        <button onclick="addMatch()">Ajouter Match</button>
+    </div>
+
+    <div class="button-container">
+        <button onclick="loadMatches()">Afficher les matchs de la journée</button>
+        <button onclick="resetData()">Réinitialiser les données</button>
+    </div>
+
+    <div class="calendar">
+        <h2>Calendrier des matchs</h2>
+        <table id="calendar">
+            <thead>
+                <tr>
+                    <th>Journée</th>
+                    <th>Date</th>
+                    <th>Heure</th>
+                    <th>Équipe 1</th>
+                    <th>Score</th>
+                    <th>Équipe 2</th>
+                    <th>Modifier Score</th>
+                    <th>Supprimer</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <div class="ranking">
+        <h2>Classement Football (Garçons)</h2>
+        <table id="ranking-football">
+            <thead>
+                <tr>
+                    <th>Équipe</th>
+                    <th>Points</th>
+                    <th>Buts Marqués</th>
+                    <th>Buts Encaissés</th>
+                    <th>Différence de Buts</th>
+                    <th>Statut</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <div class="ranking">
+        <h2>Classement Handball (Filles)</h2>
+        <table id="ranking-handball">
+            <thead>
+                <tr>
+                    <th>Équipe</th>
+                    <th>Points</th>
+                    <th>Buts Marqués</th>
+                    <th>Buts Encaissés</th>
+                    <th>Différence de Buts</th>
+                    <th>Statut</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
